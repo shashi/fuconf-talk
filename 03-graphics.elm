@@ -1,6 +1,6 @@
 {- Shapes -}
 
-main = ngon 5 100
+main = (filled black (ngon 5 100))
 
 
 
