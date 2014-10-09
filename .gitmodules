@@ -1,0 +1,3 @@
+[submodule "todomvc"]
+	path = todomvc
+	url = git@github.com:evancz/elm-todomvc.git

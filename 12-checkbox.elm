@@ -1,9 +1,9 @@
 import Graphics.Input (Input, input, checkbox)
 
-check = input False
+check = input "No"
 
 -- checkbox : Handle a -> (Bool -> a) -> Bool -> Element
 
-cb = checkbox check.handle (\x -> x) False
-main = (\v -> flow down [
-        cb , asText v]) <~ check.signal
+cb = checkbox check.handle (\x -> if x then "Yes" else "No") False
+main = (\v -> container 300 300 middle (flow down [
+        cb , plainText v])) <~ check.signal

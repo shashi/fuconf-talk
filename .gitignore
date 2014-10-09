@@ -2,3 +2,5 @@
 *.swo
 *~
 #*#
+build
+cache

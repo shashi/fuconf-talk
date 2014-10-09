@@ -2,6 +2,6 @@
    this is a comment -}
 
 main : Element
-main = plainText "Hello, World!"
+main = plainText "Hello, FuConf!"
 
 -- plainText : String -> Element

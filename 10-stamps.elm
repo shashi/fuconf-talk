@@ -9,4 +9,7 @@ stamp (w, h) (x, y) =
 stamps (w, h) points = collage (round w) (round h)
                         (map (stamp (w, h)) points)
 
-main = stamps (512, 512) [(50, 50), (250, 450), (450, 50)]
+points = foldp (::) [] lastclick
+lastclick = sampleOn Mouse.clicks Mouse.position
+
+main = stamps (512, 512) <~ points

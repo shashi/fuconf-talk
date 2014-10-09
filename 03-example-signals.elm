@@ -2,4 +2,5 @@ import Mouse
 import Keyboard
 import Window
 
-main = asText <~ Window.dimensions
+main : Signal Element
+main = lift asText (every 10)

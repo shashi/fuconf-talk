@@ -14,8 +14,8 @@ draw ball =
    ]
 
 -- Physics
-gravity = 240
-bounceVelocity = 350
+gravity = 640
+bounceVelocity = 250
 
 type Ball = { height : Float, velocity : Float}
 step : Float -> Ball -> Ball

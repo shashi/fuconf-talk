@@ -17,5 +17,6 @@ stack (w, h) (d::next) n =
              flow d [ box (cut (w, h) d),
                  stack (cut (w, h) d) (next ++ [d]) (n-1)]
 
-main =
-        (stack (512, 512) [down, left, up, right] 15)
+main = (\(w, h) -> container w h middle
+         (stack (512, 512) [down, left, up, right] 15))
+        <~ Window.dimensions

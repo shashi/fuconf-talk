@@ -40,7 +40,7 @@ step (dt, keys) mario =
 
 jump : Keys -> Model -> Model
 jump keys mario =
-    if keys.y > 0 && mario.vy == 0 then { mario | vy <- 7.0 } else mario
+    if keys.y > 0 && mario.vy == 0 then { mario | vy <- 8.0 } else mario
 
 gravity : Float -> Model -> Model
 gravity dt mario =

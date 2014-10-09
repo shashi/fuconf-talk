@@ -1,8 +1,11 @@
 {- Shapes -}
 
-main = collage 200 200
+main = collage 300 300
         [
-            (filled black (ngon 3 80))
+            (filled blue (circle 80)),
+            (filled green (ngon 4 80)),
+            (rotate (pi/6) (filled white (ngon 3 80))),
+            (move (100, 100) (rotate -(pi/6) (filled white (ngon 3 80))))
         ]
 
 

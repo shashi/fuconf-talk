@@ -8,4 +8,4 @@ How are you doing today?
 
 record = {id=007, name="Bond"}
 
-main = asText [1, 2, 3, 4]
+main = asText record

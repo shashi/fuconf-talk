@@ -9,4 +9,5 @@ boxes = [ box blue "A",
           box green "C",
           box grey "D" ]
 
-main = flow left boxes
+boxeses = [ flow right boxes, flow left boxes]
+main = flow right boxeses
