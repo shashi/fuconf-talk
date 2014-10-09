@@ -1,5 +1,7 @@
 {- Sierpinski's triangle -}
 
+import Mouse
+
 hscale = sqrt(3) / 2
 
 triangle a =
@@ -17,4 +19,8 @@ sierpinski (x, y) a n =
             sierpinski (x, y + hscale * a / 4) (a / 2) (n - 1)
         ]
 
-main = collage 400 400 [ sierpinski (0, 0) 300 7 ]
+main : Signal Element
+main = lift (\x ->
+           collage 400 400 [
+           (sierpinski (0, 0) 300 x)
+       ]) (count Mouse.clicks)

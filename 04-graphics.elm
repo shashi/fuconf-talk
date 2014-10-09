@@ -1,6 +1,9 @@
 {- Shapes -}
 
-main = (filled black (ngon 5 100))
+main = collage 200 200
+        [
+            (filled black (ngon 3 80))
+        ]
 
 
 

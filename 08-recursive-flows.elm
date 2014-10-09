@@ -2,7 +2,8 @@
 import Window
 
 box (w, h) =
-    collage (round w) (round h) [ (outlined defaultLine (rect w h)) ]
+    collage (round w) (round h)
+        [ (outlined defaultLine (rect w h)) ]
 
 cut (w, h) dir =
     case dir of
@@ -11,12 +12,10 @@ cut (w, h) dir =
         _ -> (w/2, h)
 
 stack (w, h) (d::next) n =
-    if n == 0 then
-        empty
-    else
-        flow d [ box (cut (w, h) d),
+    if | n == 0 -> empty
+       | otherwise ->
+             flow d [ box (cut (w, h) d),
                  stack (cut (w, h) d) (next ++ [d]) (n-1)]
 
 main =
         (stack (512, 512) [down, left, up, right] 15)
-
